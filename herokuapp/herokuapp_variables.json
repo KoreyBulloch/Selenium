@@ -40,6 +40,7 @@
 
     // Key presses
     "key_press":                "Keys.SHIFT",
+    "key_content":              ".//*[@id='content']",
     "key_result":               ".//*[@id='result']",
     "key_text":                 "You entered: SHIFT"
 

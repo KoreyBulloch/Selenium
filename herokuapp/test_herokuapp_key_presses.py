@@ -13,7 +13,7 @@ def test_dropdown_option2(selenium, variables):
     # Click on "Key Presses".
     selenium.find_element_by_xpath(variables["key_presses_url"]).click()
     # Press the "Shift" key.
-    selenium.send_keys(variables["key_press"])
+    selenium.find_element_by_xpath(variables["key_content"]).send_keys(Keys.SHIFT)
     # Verify that we report "Shift" as being pressed.
     assert selenium.find_element_by_xpath(variables["key_result"]).\
     text == variables["key_text"]
