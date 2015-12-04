@@ -7,7 +7,7 @@ import pytest
 import time
 
 
-# Verify that login is successful with correct credentials.
+# Test that login is successful with correct credentials.
 def test_login_success(selenium, variables):
     # Click on "Form Authentication"
     selenium.find_element_by_xpath(variables["form_auth_link"]).click()
@@ -19,5 +19,4 @@ def test_login_success(selenium, variables):
     selenium.find_element_by_xpath(variables["login_button"]).click()
     # Verify that login was successful by checking page text for
     # "Welcome to the Secure Area. When you are done click logout below."
-    assert selenium.find_element_by_xpath(variables["login_success_element"]).\
-    text == variables["login_success_text"]
+    assert selenium.find_element_by_xpath(variables["login_success_element"]).text == variables["login_success_text"]

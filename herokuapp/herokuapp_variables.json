@@ -1,13 +1,46 @@
 {
+    // Default URL
+    // ===========
     "default_url":              "https://the-internet.herokuapp.com",
 
+
+    // Variables for login
+    // ===================
+
+    // Login link
     "form_auth_link":           ".//*[@id='content']/ul/li[17]/a",
+
+    // Login field/text
     "username_field":           ".//*[@id='username']",
-    "username_text":            "tomsmith",
     "password_field":           ".//*[@id='password']",
-    "password_text":            "SuperSecretPassword!",
     "login_button":             ".//*[@id='login']/button",
+
+    // Login success
+    "username_text":            "tomsmith",
+    "password_text":            "SuperSecretPassword!",
     "login_success_element":    ".//*[@id='content']/div/h4",
-    "login_success_text":       "Welcome to the Secure Area. When you are done click logout below."
+    "login_success_text":       "Welcome to the Secure Area. When you are done click logout below.",
+
+
+    // Variables for dropdown
+    // ======================
+
+    // Dropdown link
+    "dropdown_url":             ".//*[@href='/dropdown']",
+
+    // Dropdown
+    "dropdown_option2":         "//select[@id='dropdown']/option[@value='2']",
+
+
+    // Variables for key presses
+    // =========================
+
+    // Key presses link
+    "key_presses_url":          ".//*[@href='/key_presses']",
+
+    // Key presses
+    "key_press":                "Keys.SHIFT",
+    "key_result":               ".//*[@id='result']",
+    "key_text":                 "You entered: SHIFT"
 
 }
