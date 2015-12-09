@@ -13,7 +13,9 @@ time_date = time.strftime("%Y-%m-%d")
 time_stamp = time_date + "_" + time_hours
 
 
-# Verify that we can use TinyMCE to write out "I <3 iframes".
+# Clear text, select Bold from the Format menu, type "Bold text is bold",
+# take a screenshot and save it with a time stamp in the name, and verify
+# that we write "Bold text is bold".
 def test_iframe_tinymce(selenium, variables):
     # Click on "WYSIWYG Editor".
     selenium.find_element_by_xpath(variables["wysiwyg_editor_url"]).click()
@@ -33,18 +35,15 @@ def test_iframe_tinymce(selenium, variables):
     # this we're using XPath and text contains, which could be refined
     # by further specifying the XPath.
     selenium.find_element_by_xpath("//*[contains(text(), 'Bold')]").click()
-
     # Switching focus:
     # Select TinyMCE iframe.
     selenium.switch_to.frame(selenium.find_element_by_xpath(variables["tinymce_iframe"]))
     # Select the TinyMCE text field and type "I <3 iframes".
     selenium.find_element_by_xpath(variables["tinymce_text_field"]).send_keys("Bold text is bold")
-    # Save a screenshot with our time_stamp custom file name.
+    # Save a screenshot with our custom file name and time_stamp.
     selenium.save_screenshot("TinyMCE_bold_text_" + time_stamp + ".png")
+    # Save a screenshot with our custom file name and time_stamp to a specific folder,
+    # (screenshots in the test directory).  This is PC only for now.
+    selenium.get_screenshot_as_file("./screenshots/" + "TinyMCE_bold_text_" + time_stamp + ".png")
     # Verify that we wrote "I <3 iframes" in TinyMCE.
     assert "Bold text is bold" in selenium.find_element_by_xpath(variables["tinymce_text_field"]).text
-
-
-
-    # Click on italic
-    # selenium.find_element_by_xpath(".//*[@id='mceu_4']/button").click()
