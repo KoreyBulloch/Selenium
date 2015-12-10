@@ -4,6 +4,11 @@
     "default_url":                  "https://the-internet.herokuapp.com",
 
 
+    // General
+    // =======
+    "screenshot_path":              "./screenshots/",
+
+
     // Variables for login
     // ===================
 
