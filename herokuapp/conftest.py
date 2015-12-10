@@ -10,6 +10,7 @@
 
 import pytest
 import time
+from herokuapp_utilities import Util
 
 
 # Modifies selenium to add a 5 second wait before failing out and 
@@ -35,3 +36,9 @@ def navigate_to_site(selenium, request, variables):
     if target_URL == None:
         target_URL = variables["default_url"]
     selenium.get(target_URL)
+
+
+
+@pytest.fixture(scope="function")
+def util(selenium, variables, request):
+    return Util(selenium, variables, request)
