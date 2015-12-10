@@ -16,9 +16,9 @@ time_stamp = time_date + "_" + time_hours
 # Clear text, select Bold from the Format menu, type "Bold text is bold",
 # take a screenshot and save it with a time stamp in the name, and verify
 # that we write "Bold text is bold".
-def test_iframe_tinymce(selenium, variables):
+def test_tinymce_menu_bold_text(selenium, variables, util):
     # This will be used as part of the name for all screenshots taken.
-    test_name = "TinyMCE_bold_text_"
+    test_name = "TinyMCE_menu_bold_text_"
     # Click on "WYSIWYG Editor".
     selenium.find_element_by_xpath(variables["wysiwyg_editor_url"]).click()
     # Switching focus:
@@ -46,6 +46,6 @@ def test_iframe_tinymce(selenium, variables):
     selenium.save_screenshot(test_name + time_stamp + ".png")
     # Save a screenshot with our custom file name and time_stamp to a specific folder,
     # (screenshots in the test directory).  This is PC only for now.
-    selenium.get_screenshot_as_file(variables["screenshot_path"] + test_name + time_stamp + ".png")
+    selenium.get_screenshot_as_file(util.os_safe_screenshot_path() + test_name + time_stamp + ".png")
     # Verify that we wrote "I <3 iframes" in TinyMCE.
     assert "Bold text is bold" in selenium.find_element_by_xpath(variables["tinymce_text_field"]).text
