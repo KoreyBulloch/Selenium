@@ -6,7 +6,7 @@
 
     // General
     // =======
-    "screenshot_path":              ".\\screenshots\\",
+    "screenshot_path":              "screenshots\\",
 
 
     // Variables for login
