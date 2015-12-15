@@ -60,9 +60,10 @@ def test_tinymce_responsive_resize(selenium, variables, util):
     # Maximize window size (we do this by default with config, but this is how you would do it otherwise).
     selenium.maximize_window()
     # Save a screenshot with our custom file name and time_stamp in the current working directory.
-    selenium.save_screenshot(test_name + time_stamp + "maximized_" + ".png")
+    selenium.save_screenshot(test_name + time_stamp + "_maximized" + ".png")
     # Set window size to 960x450.
-    selenium.set_window_size(960, 350)
+    selenium.set_window_size(960, 450)
     # Save a screenshot with our custom file name and time_stamp in the current working directory.
-    selenium.save_screenshot(test_name + time_stamp + "960x450_" + ".png")
+    selenium.save_screenshot(test_name + time_stamp + "_960x450" + ".png")
+    # assert selenium.support.expected_conditions.visibility_of(variables[""])
 
