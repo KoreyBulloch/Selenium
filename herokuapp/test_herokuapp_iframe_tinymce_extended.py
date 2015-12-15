@@ -49,3 +49,20 @@ def test_tinymce_menu_bold_text(selenium, variables, util):
     selenium.get_screenshot_as_file(util.os_safe_screenshot_path() + test_name + time_stamp + ".png")
     # Verify that we wrote "Bold text is bold" in TinyMCE.
     assert "Bold text is bold" in selenium.find_element_by_xpath(variables["tinymce_text_field"]).text
+
+
+def test_tinymce_responsive_resize(selenium, variables, util):
+    # This will be used as part of the name for all screenshots taken for
+    # this test.
+    test_name = "TinyMCE_responsive_resize_"
+    # Click on "WYSIWYG Editor".
+    selenium.find_element_by_xpath(variables["wysiwyg_editor_url"]).click()
+    # Maximize window size (we do this by default with config, but this is how you would do it otherwise).
+    selenium.maximize_window()
+    # Save a screenshot with our custom file name and time_stamp in the current working directory.
+    selenium.save_screenshot(test_name + time_stamp + "maximized_" + ".png")
+    # Set window size to 960x450.
+    selenium.set_window_size(960, 350)
+    # Save a screenshot with our custom file name and time_stamp in the current working directory.
+    selenium.save_screenshot(test_name + time_stamp + "960x450_" + ".png")
+
