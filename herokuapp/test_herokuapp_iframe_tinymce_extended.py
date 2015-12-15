@@ -18,6 +18,8 @@ def test_tinymce_menu_bold_text(selenium, variables, util):
     # This will be used as part of the name for all screenshots taken for
     # this test.
     test_name = "TinyMCE_menu_bold_text_"
+    # Checks for a screenshot folder in the current directory, and creates one if it is not found.
+    util.check_and_create_screenshot_folder()
     # Click on "WYSIWYG Editor".
     selenium.find_element_by_xpath(variables["wysiwyg_editor_url"]).click()
     # Switching focus:
@@ -55,6 +57,8 @@ def test_tinymce_responsive_resize(selenium, variables, util):
     # This will be used as part of the name for all screenshots taken for
     # this test.
     test_name = "TinyMCE_responsive_resize_"
+    # Checks for a screenshot folder in the current directory, and creates one if it is not found.
+    util.check_and_create_screenshot_folder()
     # Click on "WYSIWYG Editor".
     selenium.find_element_by_xpath(variables["wysiwyg_editor_url"]).click()
     # Maximize window size (we do this by default with config, but this is how you would do it otherwise).
