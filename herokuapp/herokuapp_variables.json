@@ -74,9 +74,12 @@
     "i_heart_iframe_text":          "I <3 iframes.",
 
 
+    // Variables for TinyMCE extended
+    // ==============================
+    
     // Extended TinyMCE
     "format_menu":                  ".//*[@id='mceu_18-open']",
     "format_menu_bold":             ".//*[@id='mceu_44-text']",
-    "italic_button":                ".//*[@id='mceu_4']/button"
+    "italic_button":                ".//*[@class='example']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/button"
 
 }
