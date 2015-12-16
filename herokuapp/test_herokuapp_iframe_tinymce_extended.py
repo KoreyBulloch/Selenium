@@ -44,7 +44,8 @@ def test_tinymce_menu_bold_text(selenium, variables, util):
     # Select the TinyMCE text field and type "Bold text is bold".
     selenium.find_element_by_xpath(variables["tinymce_text_field"]).send_keys("Bold text is bold")
     # Save a screenshot with our custom file name and time_stamp in the current working directory.
-    selenium.save_screenshot(test_name + time_stamp + ".png")
+    # This has been disabled as it clutters the test folder, but it remains a good example.
+    # selenium.save_screenshot(test_name + time_stamp + ".png")
     # Save a screenshot with our custom file name and time_stamp in a specific folder.
     # For this, the folder is "screenshots" in the test directory.  This will fail if the folder
     # is not present (but it's fair to assume that it will be, so I'm not bothering with a check).
@@ -67,7 +68,9 @@ def test_tinymce_responsive_resize(selenium, variables, util):
     selenium.save_screenshot(test_name + time_stamp + "_maximized" + ".png")
     # Set window size to 960x450.
     selenium.set_window_size(960, 450)
-    # Save a screenshot with our custom file name and time_stamp in the current working directory.
-    selenium.save_screenshot(test_name + time_stamp + "_960x450" + ".png")
+    # Save a screenshot with our custom file name and time_stamp in the "screenshots" folder.
+    selenium.get_screenshot_as_file(util.os_safe_screenshot_path() + test_name + time_stamp + "_960x450" + ".png")
     # assert selenium.support.expected_conditions.visibility_of(variables[""])
 
+
+#def test_tinymce_button_italic_text(selenium, variables, util):
