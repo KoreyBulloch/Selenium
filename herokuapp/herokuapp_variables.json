@@ -76,10 +76,22 @@
 
     // Variables for TinyMCE extended
     // ==============================
-    
+
     // Extended TinyMCE
     "format_menu":                  ".//*[@id='mceu_18-open']",
     "format_menu_bold":             ".//*[@id='mceu_44-text']",
-    "italic_button":                ".//*[@class='example']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/button"
+    "italic_button":                ".//*[@class='example']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/button",
+
+
+    // Variables for multiple windows
+    // ==============================
+
+    // Multiple windows link
+    "multiple_windows_url":         ".//*[@href='/Multiple Windows']",
+
+    "multiple_windows_click_here":  ".//*[@href='/windows/new']",
+    "multiple_windows_confirmation":    "New Window",
+    "multiple_windows_new_url":     "https://the-internet.herokuapp.com/windows/new"
+    
 
 }
