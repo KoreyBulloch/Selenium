@@ -1,0 +1,97 @@
+{
+    // Default URL
+    // ===========
+    "default_url":                  "https://the-internet.herokuapp.com",
+
+
+    // General
+    // =======
+    "screenshot_path":              "screenshots\\",
+
+
+    // Variables for login
+    // ===================
+
+    // Login link
+    "form_auth_link":               ".//*[@id='content']/ul/li[17]/a",
+
+    // Login field/text
+    "username_field":               ".//*[@id='username']",
+    "password_field":               ".//*[@id='password']",
+    "login_button":                 ".//*[@id='login']/button",
+
+    // Login success
+    "username_text":                "tomsmith",
+    "password_text":                "SuperSecretPassword!",
+    "login_success_element":        ".//*[@id='content']/div/h4",
+    "login_success_text":           "Welcome to the Secure Area. When you are done click logout below.",
+
+
+    // Variables for dropdown
+    // ======================
+
+    // Dropdown link
+    "dropdown_url":                 ".//*[@href='/dropdown']",
+
+    // Dropdown
+    "dropdown_option2":             "//select[@id='dropdown']/option[@value='2']",
+
+
+    // Variables for key presses
+    // =========================
+
+    // Key presses link
+    "key_presses_url":              ".//*[@href='/key_presses']",
+
+    // Key presses
+    "key_press":                    "Keys.SHIFT",
+    "key_content":                  ".//*[@id='content']",
+    "key_result":                   ".//*[@id='result']",
+    "key_text":                     "You entered: SHIFT",
+
+
+    // Variables for JavaScript alerts
+    // ===============================
+
+    // JavaScript alerts link
+    "javascript_alerts_url":        ".//*[@href='/javascript_alerts']",
+
+    // JavaScript alert
+    "click_for_js_confirm":         ".//*[@id='content']/div/ul/li[2]/button",
+    "click_result":                 ".//*[@id='result']",
+    "click_result_confirm_text":    "You clicked: Ok",
+
+
+    // Variables for TinyMCE iframe
+    // ============================
+
+    // TinyMCE iframe
+    "wysiwyg_editor_url":           ".//*[@href='/tinymce']",
+
+    // TinyMCE
+    "tinymce_iframe":               ".//*[@id='mce_0_ifr']",
+    "tinymce_text_field":           ".//*[@id='tinymce']",
+    "i_heart_iframe_text":          "I <3 iframes.",
+
+
+    // Variables for TinyMCE extended
+    // ==============================
+
+    // Extended TinyMCE
+    "format_menu":                  ".//*[@id='mceu_18-open']",
+    "format_menu_bold":             ".//*[@id='mceu_44-text']",
+    "italic_button":                ".//*[@class='example']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/button",
+
+
+    // Variables for multiple windows
+    // ==============================
+
+    // Multiple windows link
+    "multiple_windows_url":         ".//*[@href='/windows']",
+
+    "multiple_windows_click_here":  ".//*[@href='/windows/new']",
+    "multiple_windows_confirmation":    "New Window",
+    "multiple_windows_new_url":     "https://the-internet.herokuapp.com/windows/new"
+    
+
+}
