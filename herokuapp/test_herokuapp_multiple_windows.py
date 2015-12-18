@@ -7,7 +7,7 @@ import pytest
 import time
 
 
-# Verify typed text after selecting Bold from the menu and typing in bold.
+# Verify URL after switching to another window.
 def test_tinymce_menu_bold_text(selenium, variables):
     # Click on "Multiple Windows".
     selenium.find_element_by_xpath(variables["multiple_windows_url"]).click()
