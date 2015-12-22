@@ -3,7 +3,7 @@ Requirements:
 
 1) Python 3.x
 2) py.test-selenium (includes selenium and py.test)
-
+* HJSON is now supported, and allows for comments in the variables file.
 
 
 Setup:
